@@ -2,10 +2,26 @@ pipeline {
     agent {
         docker { image 'node:7-alpine' }
     }
-    stages {
+    environment {
+        GITSTASH_COMMON_CREDS = credentials('jenkins-gitstash-creds')
+    }
+     options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+      stages {
+        stage('Build') {
+            steps {
+                  echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
         stage('Test') {
             steps {
                 sh 'node --version'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
