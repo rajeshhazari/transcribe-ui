@@ -1,0 +1,32 @@
+<form id="contact-form" method="post" action="/contactus" role="form">
+    <div class="messages"></div>
+        <div class="controls">
+            <div class="row">
+                <div class="form-group">
+                    <label for="form_name">Name:</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="name?" required="required" data-error="Please enter your name.">
+                    <div class="error"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="form_email">Email:</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="email?" required="required" data-error="Invalid Email.">
+                    <div class="error"></div>
+               </div>
+               <div class="form-group">
+                    <label for="form_phone">Phone:</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="phone?">
+                    <div class="error"></div>
+              </div>
+                    `enter code here`</div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="form_message">Message:</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Mensagem para o Rancho" rows="4" required="required" data-error="Qual a sua mensagem?"></textarea>
+                            <div class=""></div>
+                        </div>
+                    <input type="submit" class="btn btn-success btn-send" value="send">
+                    </div>
+                </div>
+            </form>

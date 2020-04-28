@@ -1,0 +1,36 @@
+<header>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed "  >
+    <!--   <div ><a href="https://www.smarttranscribe.com" class="navbar-brand">Transcribe App</a></div> -->
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar"
+      aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a href="https://www.smarttranscribe.com" class="navbar-brand menu-text-color">Transcribe App</a>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <a routerLink="/home" class="nav-link  nav-item menu-text-color">Home</a>
+      <a *ngIf="loginService.isLoggedIn" routerLink="/transcribe" class="nav-link  nav-item menu-text-color">Transcribe</a>
+      <a *ngIf="loginService.isLoggedIn" routerLink="/recenttran" class="nav-link  nav-item menu-text-color ">Recent-Transcribe</a>
+      <a routerLink="/contactus" class="nav-link nav-item menu-text-color">Contact-Us</a>
+      <a routerLink="/aboutme" class="nav-link nav-item menu-text-color ">About</a>
+     
+      <!--
+  
+    *ngIf="loginService.issessionExpired()"  routerLink="/sessionExpired"
+    *ngIf="loginService.issessionExpired()"  routerLink="/invalidSession" 
+  
+    -->
+
+    </div>
+    <div class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a *ngIf="!loginService.isLoggedIn" routerLink="/login" class="nav-link nav-item menu-text-color"><i class="fas faUsers"> Login </i> </a></li>
+            <li> <a *ngIf="loginService.isLoggedIn" (click)="onLogoutClick()" routerLink="/logout" class="nav-link nav-item menu-text-color">LogOut</a>  </li>
+          </ul>
+    </div>
+  </nav>
+
+</header>

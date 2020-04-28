@@ -1,0 +1,49 @@
+<div class="card text-center">
+    <div class="card-header">
+      Transcribe
+    </div>
+<div id="direct_upload" ng2FileDrop >
+
+    <h2>Direct upload from the browser and get the transcription.</h2>
+    <p>You can also drag and drop an wav/mp3 or video files into the dashed area.</p>
+    <form class="md-form">
+      
+     <!-- 
+      <div class="file-field">
+      <input type="file" id="uploadFile" (uploadOutput)="onUploadOutput($event)"  ngFileSelect>
+    </div> -->
+
+    <div class=" file-field input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="uploadFile" (uploadOutput)="onUploadOutput($event)"  ngFileSelect   aria-describedby="inputGroupFileAddon01">
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+      </div>
+    </div>
+    
+    </form>
+    </div>
+    
+    <a routerLink="/home" class="btn-link">Home</a>
+  </div>
+    <!-- 
+    
+    
+    
+      <form>
+    <input type="file" id="uploadFile" (uploadOutput)="onUploadOutput($event, qrcode.type)" [uploadInput]="uploadInput" ngFileSelect>
+    
+    </form>
+    
+    <div class="info">
+                <table>
+                    <tr *ngFor="let property of getFileProperties(response.data)">
+                        <td> {{ property.key }} </td>
+                        <td> {{ property.value | json}} </td>
+                    </tr>
+                </table>
+    </div>
+    
+    -->
