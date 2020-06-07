@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   currentUserSubject: any;
   formSubmitAttempt: boolean; // {2}
   private message: string;
-
+  private credentials;
 
   constructor(private formBuilder: FormBuilder,
               private route: ActivatedRoute,
@@ -70,7 +70,7 @@ ngOnInit() {
       if (this.loginForm.invalid) {
           return false;
       }
-      console.log('this.f.username.value:: ',this.f.username.value);
+      console.log('this.f.username.value:: ',this.f.password.value);
       this.loading = true;
       this.authenticationService.authenticate(this.f.username.value, this.f.password.value)
           .pipe(first())

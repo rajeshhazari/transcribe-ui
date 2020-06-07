@@ -34,7 +34,7 @@ export class AuthenticationService {
      authenticate(username: string, password: string) {
       const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
 
-      if (username === 'rajeshhazari' && password === 'password') {
+      if (username === 'rajesh_hazari@yahoo.com' && password === 'admin321') {
         localStorage.setItem('username', username);
         this.loggedIn.next(true);
         this.invalidLogin =  true;

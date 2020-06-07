@@ -29,6 +29,7 @@ import { RightnavComponent } from './rightnav/rightnav.component';
 import { TranscribeComponent } from './transcribe/transcribe.component';
 import { CurrentimeComponent } from './currentime/currentime.component';
 import { httpInterceptorProviders } from './_helpers';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { httpInterceptorProviders } from './_helpers';
     LeftnavComponent,
     RightnavComponent,
     TranscribeComponent,
-    CurrentimeComponent
+    CurrentimeComponent,
+    PrivacyPolicyComponent
     
   ],
   imports: [
